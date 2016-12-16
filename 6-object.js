@@ -46,7 +46,7 @@ pessoa.endereco['bairro'] = 'Centro';
 pessoa.telefone = null;
 pessoa.peso = undefined;
 
-// Acessor propriedade por for in;
+// Acessar propriedade por for in;
 // Ou introspecção no objeto pessoas;
 for(var propriedade in pessoa) {
     console.log(propriedade + ' ' + pessoa[propriedade]);
