@@ -256,3 +256,4 @@
 
     var fnHelloWord = helloWord();
     console.log(fnHelloWord());
+
