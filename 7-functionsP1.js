@@ -101,7 +101,7 @@
     Não, mas pode-se simular a existência deles. 
     
     * Método é um objeto, sendo uma coleção dinâmica de chaves e valores. Nada mais que isso. 
-    Se ele valor for uma função, pode ser invocada, dando a impressão que eu tenho um método. 
+    Se esse valor for uma função, pode ser invocada, dando a impressão que eu tenho um método. 
 
     Usando uma função como método declarado, declarado dentro do objeto
     
