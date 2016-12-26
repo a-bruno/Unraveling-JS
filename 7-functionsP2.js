@@ -98,8 +98,8 @@ var createCounter = function() {
 };
 
 var counter = createCounter();
-consle.log(counter.value); // undefined
-consle.log(counter.add()); // 1
+console.log(counter.value); // undefined
+console.log(counter.add()); // 1
 
 // Acessando por meio de Constructor Function 
 var Counter = function() {
@@ -110,8 +110,8 @@ var Counter = function() {
 };
 
 var counter = new Counter();
-consle.log(counter.value); // undefined
-consle.log(counter.add()); // 1
+console.log(counter.value); // undefined
+console.log(counter.add()); // 1
 
 // Ainda existe a função IIFE (Immediately-Invoked Function Expression). Uma expressão invocada automáticamente.
 
@@ -128,10 +128,10 @@ var counter = (function() {
     };
 })();
 
-consle.log(counter.value); // undefined
-consle.log(counter.add()); // 1
+console.log(counter.value); // undefined
+console.log(counter.add()); // 1
 counter.reset() // 0
-consle.log(counter.add()); // 1
+console.log(counter.add()); // 1
 
 // Utilizando o Revealing Module Pattern
 var counter = (function() {
@@ -148,4 +148,11 @@ var counter = (function() {
         reset: _reset
     };
 })();
+
+counter._value; //undefined
+counter.add(); // 1
+counter.reset(); // 0
+counter.add(); // 1
+
+
 
