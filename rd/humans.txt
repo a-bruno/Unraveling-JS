@@ -1,0 +1,4 @@
+Esses são exemplos de JS do Curso: Desvendando a línguagem JavaScript.
+
+Autor: Rodrigo Branas
+Link: https://www.youtube.com/watch?v=093dIOCNeIc
