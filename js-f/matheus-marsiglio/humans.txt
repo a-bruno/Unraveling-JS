@@ -3,3 +3,75 @@
 
 // Anotações
 
+#Funções (matemática)
+
+Um dos conceitos mais importantes da matemática, é uma generalização da noção comum de fórmula matemática.
+Função é uma generação de equação matemática.
+
+#LAMBDA (CALCULOS)
+
+É uma área da matemática que estuda funções anonimas. É um sistema formal que estuda funções recursivas computáveis.
+Sua principal característica são as entidades que podem ser utilizadas como argumentos e retornados como vaores de
+outras funções.
+
+	Ex:
+
+	squaresum(x,y) -> x + x * y+y
+
+	*função anonima:
+
+		(x,y) -> x + x * y+y // Só tirar o nome da função
+
+	*JavaScript no meio da história
+	
+		(x,y) -> x + x * y+y
+
+		function(x,y) {
+			return x+x * y+y;
+		}
+
+		- ECMA SCRIPT
+
+		(x,y) => {
+			return x+x * y+y;
+		}
+
+		...
+
+		1) quando tem só um valor retornando não precisa de return;
+
+			(x,y) => {
+				x+x * y+y;
+			}
+
+		2) quando tem só um valor retornando não precisa de colchetes;
+
+			(x,y) => x+x * y+y;
+
+	* Recursão
+		-funções recursivas deixa o código mais limpo, pois não precisa estruturar os vários while, for etc...
+	
+		F(n) = 1, if n = 0; else n * F(n - 1);		
+
+		function F(n) {
+			if(n == 0) {
+				return 1;
+			} else {
+				return n * F(n -1);
+			}
+		}
+
+#JAVASCRIPT
+
+	- JavaScript começou com uma estrutura de linguagem com características imperativas.
+
+	1) Funcional
+
+		Visa o uso de funções matemáticas como estrutura; Evita estados e/ou dados mutáveis.
+
+	2) Imperativo
+	
+		Visa o uso de estruturas de repetição, como for e while;	Trabalha com dados e/ou estados mutáveis;
+
+	* Varias funções do JavaScript não são reconhecidas pelos browsers.
+
