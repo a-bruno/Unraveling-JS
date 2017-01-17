@@ -33,7 +33,6 @@ console.log(add('C'));
 // Existem algumas formas de fugir do escopo global...
 
 // Ténicas: Objeto
-
 var counter = {
     value: 0,
     add: function() {
@@ -69,7 +68,6 @@ console.log(items.add('C'));
 // Externamente.
 
 // Ex:
-
 var counter = function() {
     var value = 0;
     var add = function() {

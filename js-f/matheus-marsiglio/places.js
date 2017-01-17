@@ -5,6 +5,5 @@ const places = [
 	{name: 'Boteco na Augusta', rate: 2, prices: '$$'},
 ];
 
-// Exportado places para ser buscado em qualquer 
-// arquivo dentro da pasta.
+// Exportado places para ser buscado em qualquer arquivo dentro da pasta.
 module.exports = places;
