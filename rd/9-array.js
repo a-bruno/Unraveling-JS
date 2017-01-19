@@ -69,4 +69,89 @@ var carros = new Array(10);
 var carros = ['Ka','Corsa','Palio'];
 carros.valueOf(); // ['Ka','Corsa','Palio']
 
+// Visualizando o Array com toString, ou converter o Array para imprimir na tela.
+carros.toString(); 
+
+// Consultando o tamanho do Array com length.
+// Obs: length é uma propriedade e não uma função.
+carros.length; // 3
+
+// Inserir e remover elementos do Array
+// Inserindo novos elementos no final com push
+// Push é uma das operações mais utilizados em um Array.
+carros.push('Gol'); // 4
+
+carros.toString(); // ['Ka','Corsa','Palio','Gol']
+
+// Operação inversa do push com pop.
+// O pop retira elementos do final do Array.
+carros.pop('Palio');
+// Ou
+carros.pop();
+
+carros.toString(); // ['Ka','Corsa']
+
+// Fatiando um Array Slice
+carros.slice(0,2); // Ka, Corsa
+
+// Posição 2 em diante
+carros.slice(2); // Corsa, Palio
+
+// Invertendo a ordem de um Array com reverse.
+carros.reverse();
+
+carros.toString(); // Palio, Corsa, Ka
+
+// Ordenando os elementos de um Array com sort.
+
+var = carros = [];
+
+// Se usar sort sem nenhum parâmetro a ordenação será por ordem alfabética.
+carros.sort();
+
+carros[0] = {modelo: 'Ka', preco: 28800};
+carros[1] = {modelo: 'Corsa', preco: 34750};
+carros[2] = {modelo: 'Palio', preco: 32000};
+
+// Função de comparação que recebe dois parámetros, sendo A o primeiro da comparação e B o segundo.
+/* 
+	Essa função deve retornar um núnero negativo 0 ou um número positivo, sendo que se for um número 
+	negativo A deve vir em primeiro lugar e B em segundo. Se for 0 o valor fica inalterado, deixando os 
+	elementos em suas posições.E se for um número positivo, então B deve tomar a frente de A e ficar em 
+	primeiro lugar.
+*/
+carros.sort(function(a, b) {
+	return a.preco - b.preco;
+});
+
+carros.valueOf(); // Ka, Palio, Corsa
+
+// Função inversa
+carros.sort(function(a, b) {
+	return b.preco - a.preco;
+});
+
+carros.valueOf(); // Corsa, Palio, Ka
+
+// Juntando os elementos em um Array com join
+// O join permite juntar elementos de um Array com base me um separador;
+// O resultado dessa operação é uma String;
+// Serve para gerar um arquivo CSV etc;
+var carros = ['Ka','Corsa','Palio','Gol'];
+
+carros.join(';'); // 'Ka;Corsa;Palio;Gol'
+
+// O Join é como se fosse uma operação inversa de um split.
+// Quebrando a String de volta em um Array.
+carros.join(';').split(';'); // ['Ka'],['Corsa'],['Palio'],['Gol']
+
+// Multiplicação de Strings
+
+'JavaScript' + 10 // NaN
+
+new Array(10); // Array inicializado com 10 espaços undefined
+
+// Multiplicando a String para cada valor undefined
+new Array(10).join('JavaScript');
+
 
