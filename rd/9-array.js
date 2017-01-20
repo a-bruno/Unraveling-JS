@@ -154,4 +154,33 @@ new Array(10); // Array inicializado com 10 espaços undefined
 // Multiplicando a String para cada valor undefined
 new Array(10).join('JavaScript');
 
+// Inserindo novos elementos no ínicio com unshift
+carros.unshift('Gol');
 
+// Retirando elementos do ínicio com shift
+carros.shift();
+
+// Localizando elementos com indexOf(), o indice do elemento no Array
+// É utilizado comumente com splice
+carros.indexOf('Ka'); //1
+
+// Removendo elementos em uma posição com splice
+var pos = carros.indexOf('Corsa'); // 1
+
+/* Splice recebe dois parâmetros, sendo o primeiro a posição e o segundo o número de 
+	elementos para ser removido. 
+*/
+carros.splice(pos, 1); // Corsa
+
+// Substituindo elementos em uma posição com splice
+var pos = carros.indexOf('Corsa'); // 1
+
+// Neste carro ele vai remover o item do indice e vai colocar outro no lugar.
+// A partir do terceiro parâmetro é items a serem adicionados.
+carros.splice(pos, 1, 'Sonic');
+
+// Adiconando elementos em uma posição com splice
+var pos = carros.indexOf('Corsa'); // 1
+
+// Com 0 não remove ninguém.
+carros.splice(pos, 0, 'Sonic');
