@@ -184,3 +184,79 @@ var pos = carros.indexOf('Corsa'); // 1
 
 // Com 0 não remove ninguém.
 carros.splice(pos, 0, 'Sonic');
+
+// Iterando um Array com forEach. 
+carros.forEach(function(elemento) {
+	// lógica de interação
+	console.log(elemento); // Ka, Corsa, Sonic, Palio
+});
+
+// Serie de operações no Array que são ignoradas por maior parte dos devs.
+
+// Filtrando o Array com filter
+carros.sort();
+
+carros[0] = {marca: 'Ford', modelo: 'Ka'};
+carros[1] = {marca: 'Chevrolet', modelo: 'Corsa'};
+carros[2] = {marca: 'Fiat', modelo: 'Palio'};
+
+carros.filter(function(elemento) {
+	return elemento.marca === 'Ford'; // [{marca: 'Ford', modelo: 'Ka'}]
+});
+
+var carrosFord = carros.filter(function(elemento) {
+	return elemento.marca === 'Ford';
+});
+
+console.log(carrosFord); // [{marca: 'Ford', modelo: 'Ka'}]
+
+// Testando os elementos do Array com every
+carros.every(function(elemento){
+	// Neste caso, every vai testar se todos os elementos são da marca Ford.
+	return elemento.marca == 'Ford'; // false
+});
+
+// some
+// Testando os elementos do Array com some
+carros.some(function(elemento){
+	// Neste caso, every vai testar se existe algum elementos da marca Ford.
+	return elemento.marca == 'Ford'; // true
+});
+
+// Mapeando elementos do array com map. O map deriva um novo Array en que se faz 
+// algum tipo de análise.
+carros.map(function(elemento) {
+	// criando/derivando um novo com marcas.
+	return elemento.marca; // ['Ford','Chevrolet','Fiat']
+});
+
+// Testando a quantidade de caracteres que existe em cada modelo de carro.
+carros.map(function(elemento) {
+	// retornando um array com a quantidade de caracteres de cada modelo.
+	return elemento.modelo.lenght; // [2,5,5]
+}); 
+
+// Processando os elementos do Array com reduce.
+// O reduce permite um processamento/acumulação.
+
+carros[0] = {modelo: 'Ka', preco: 28800};
+carros[1] = {modelo: 'Corsa', preco: 34750};
+carros[2] = {modelo: 'Palio', preco: 32000};
+
+// Saber o total de todos os preços
+
+// reduce recebe alguns parâmetros, sendo os mais importante o elemento anterior 
+// (prev) e o atual (current). Os outros parâmetros seriam o indice e estado atual.
+// o número zero representa de onde deve começar.
+carros.reduce(function(prev, current) {
+	return prev + current.preco; // 95550
+}, 0);
+
+// Concatenando dois Arrays com concat. O concat gera um novo Array.
+var carros = ['Ka','Corsa','Palio'];
+var motos = ['Honda','Yamaha'];
+
+var veiculos = carros.concat(motos);
+
+veiculos.toString(); // ['Ka','Corsa','Palio','Honda','Yamaha']
+

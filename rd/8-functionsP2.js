@@ -152,4 +152,3 @@ counter.add(); // 1
 counter.reset(); // 0
 counter.add(); // 1
 
-
