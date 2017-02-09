@@ -107,6 +107,119 @@ if(10) {
 	console.log('Ok') // Ok
 }
 
+/*
+	Quando avaliados situações boleanas, os tipos assumem valores truthy ou falsy
+	por meio da operação abstrata ToBooolean.
+*/
 
+!!0 // false
 
+!!NaN //false
 
+!!'' // false
+
+!!false // falsse
+
+!!null //false
+
+!!undefined // false
+
+// Todos os outros são truthy por padrão, incluindo {} e []
+
+// Caso prático
+
+var generateSerial = function(max) {
+	return Math.floor(Math.random() * max);
+};
+
+generateSerial(1000); // 897
+generateSerial(100); // 90
+generateSerial(10); // 7
+generateSerial(); // NaN
+
+// Inicializando max
+var generateSerial = function(max) {
+	if(max === undefined || max === null || max === 0) {
+		max = 100;
+	}
+
+	return Math.floor(Math.random() * max);
+};
+
+var generateSerial = function(max) {
+	if(!max) {
+		max = 100;
+	}
+
+	return Math.floor(Math.random() * max);
+};
+
+var generateSerial = function(max) {
+	max = max || 100;
+
+	return Math.floor(Math.random() * max);
+};
+
+// Tem muita diferença entre os operadores | e & e os || e &&?
+
+1 || 2 // 1
+
+// Operação bitwise
+1 | 2 // 3
+
+0001 = 1
+0010 = 2
+0011 = 3
+
+// Explicação: 1 OU 0 é 1
+
+1 && 2 // 2
+
+// Operação bitwise 
+1 & 2 // 0
+
+0001 = 1
+0010 = 2
+
+// Explicação: 1 E 0 é 1
+
+/*
+	Existem ainda outros operadores para realizar operações bit a bit
+	como negação ~, ou exclusivo ^ e deslocamento de bits >>, << e >>>
+
+	Ainda existem outros operadores especiais...
+*/ 
+
+// typeof retorna o tipo do operando
+typeof 10; // number
+typeof '10'; // string
+typeof true; // boolean
+
+// new construi um objeto com base em uma função construtora
+
+// instanceof verifica se o objeto possui a função construtora em sua 
+// cadeia de protótipos.
+
+var Pessoa = function(nome, idade) {
+	this.nome = nome;
+	this.idade = idade;
+};
+
+var pedro = new Pessoa('Pedro', 20);
+
+console.log(pedro instanceof Pessoa);
+
+// in verifica se a propriedade faz parte do objeto
+console.log('nome' in pedro); // true
+
+// delete apaga a propriedade de um objeto.
+delete pedro.nome;
+
+console.log('nome' in pedro); // false
+
+// Operador ternário 
+(expressão) ? true : false
+
+var idade = 22;
+
+(idade >= 18) ? 'Maior de idade' : 'Menor de idade';
